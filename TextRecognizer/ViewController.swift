@@ -20,9 +20,7 @@ class ViewController: UIViewController {
     @IBAction func shutterAction(_ sender: Any) {
         self.performSegue(withIdentifier: "showCameraCapture", sender: self)
     }
-    
-    
-    
+
     private var scannedImaged: UIImage = UIImage() {
         didSet {
             imageView.image = scannedImaged
@@ -53,7 +51,7 @@ class ViewController: UIViewController {
             let handler = VNImageRequestHandler(data: imageData)
             try? handler.perform(requests)
             
-            guard let observations = request.results as? [VNRecognizedTextObservation] else { fatalError("Wrong observation received") }
+            guard let observations = request.results else { fatalError("Wrong observation received") }
             
             var recognizedText = ""
             for observation in observations {

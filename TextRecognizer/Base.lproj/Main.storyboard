@@ -93,8 +93,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Text Recognizer" id="3Of-XB-J5S">
-                        <barButtonItem key="leftBarButtonItem" title="Shutter" style="plain" id="yel-4y-l5O">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="R3g-P6-cRW">
+                        <barButtonItem key="leftBarButtonItem" title="Shutter" id="yel-4y-l5O">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="R3g-P6-cRW">
                                 <rect key="frame" x="20" y="5" width="92" height="34.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
