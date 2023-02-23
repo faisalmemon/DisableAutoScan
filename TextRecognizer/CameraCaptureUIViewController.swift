@@ -22,15 +22,11 @@ class CameraCaptureUIViewController: UIViewController, AVCapturePhotoCaptureDele
     
     @IBAction func capturePressed(_ sender: Any) {
         let settings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])
-                stillImageOutput.capturePhoto(with: settings, delegate: self)
+        stillImageOutput.capturePhoto(with: settings, delegate: self)
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -54,9 +50,7 @@ class CameraCaptureUIViewController: UIViewController, AVCapturePhotoCaptureDele
         catch let error  {
             print("Error Unable to initialize back camera:  \(error.localizedDescription)")
         }
-        
     }
-    
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -71,7 +65,7 @@ class CameraCaptureUIViewController: UIViewController, AVCapturePhotoCaptureDele
         videoPreviewLayer.connection?.videoOrientation = .portrait
         cameraCaptureView.layer.addSublayer(videoPreviewLayer)
         
-        DispatchQueue.global(qos: .userInitiated).async { //[weak self] in
+        DispatchQueue.global(qos: .userInitiated).async {
             self.captureSession.startRunning()
             DispatchQueue.main.async {
                 self.videoPreviewLayer.frame = self.cameraCaptureView.bounds
@@ -79,15 +73,6 @@ class CameraCaptureUIViewController: UIViewController, AVCapturePhotoCaptureDele
         }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         
         guard let imageData = photo.fileDataRepresentation()
