@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		395E9BD829A794FB004E31C1 /* CameraCaptureUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395E9BD729A794FB004E31C1 /* CameraCaptureUIViewController.swift */; };
 		F167B3D723705CE600015399 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F167B3D623705CE600015399 /* AppDelegate.swift */; };
 		F167B3D923705CE600015399 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F167B3D823705CE600015399 /* SceneDelegate.swift */; };
 		F167B3DB23705CE600015399 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F167B3DA23705CE600015399 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		395E9BD729A794FB004E31C1 /* CameraCaptureUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCaptureUIViewController.swift; sourceTree = "<group>"; };
 		F167B3D323705CE600015399 /* TextRecognizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextRecognizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F167B3D623705CE600015399 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F167B3D823705CE600015399 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				F167B3D623705CE600015399 /* AppDelegate.swift */,
 				F167B3D823705CE600015399 /* SceneDelegate.swift */,
 				F167B3DA23705CE600015399 /* ViewController.swift */,
+				395E9BD729A794FB004E31C1 /* CameraCaptureUIViewController.swift */,
 				F167B3DC23705CE600015399 /* Main.storyboard */,
 				F167B3DF23705CE700015399 /* Assets.xcassets */,
 				F167B3E123705CE700015399 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				395E9BD829A794FB004E31C1 /* CameraCaptureUIViewController.swift in Sources */,
 				F167B3DB23705CE600015399 /* ViewController.swift in Sources */,
 				F167B3D723705CE600015399 /* AppDelegate.swift in Sources */,
 				F167B3D923705CE600015399 /* SceneDelegate.swift in Sources */,
@@ -285,7 +289,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 65B2YRUSFL;
+				DEVELOPMENT_TEAM = 5Y3322JWHB;
 				INFOPLIST_FILE = TextRecognizer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -303,7 +307,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 65B2YRUSFL;
+				DEVELOPMENT_TEAM = 5Y3322JWHB;
 				INFOPLIST_FILE = TextRecognizer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

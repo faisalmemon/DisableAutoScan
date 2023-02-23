@@ -10,11 +10,18 @@ import UIKit
 import Vision
 import VisionKit
 import NaturalLanguage
+import AVFoundation
 
 class ViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var recognizedTextLabel: UILabel!
     @IBOutlet weak var recognizedSentimentLabel: UILabel!
+    
+    @IBAction func shutterAction(_ sender: Any) {
+        self.performSegue(withIdentifier: "showCameraCapture", sender: self)
+    }
+    
+    
     
     private var scannedImaged: UIImage = UIImage() {
         didSet {
@@ -81,6 +88,16 @@ class ViewController: UIViewController {
         let controller  = VNDocumentCameraViewController()
         controller.delegate = self
         present(controller, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cameraCaptureVC = segue.destination as? CameraCaptureUIViewController {
+            cameraCaptureVC.imageWasCapturedClosure = { image in
+                self.scannedImaged = image
+            }
+        }
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
 }
 
